@@ -1,0 +1,104 @@
+@import '../../scss/vars';
+
+.small-rectangle {
+  position: fixed;
+  border: 1px solid black;
+  z-index:11;
+  height: 5px;
+  width: 50px;
+  border-radius: 15px;
+}
+
+.small-rectangle.r-red {
+  top: $y-position+475;
+  left: $x-position+95;
+  background-color: #47A5DB;
+}
+.small-rectangle.r-blue{
+  top: $y-position+475;
+  left: $x-position+175;
+  background-color: #555;
+}
+.small-rectangle.r-f-black{
+  height: 7px;
+  top: $y-position+448;
+  left: $x-position+705;
+  background-color: black;
+}
+.small-rectangle.r-s-black{
+  height: 7px;
+  top: $y-position+448;
+  left: $x-position+760;
+  background-color: black;
+}
+.big-rectangle {
+  top: $y-position+534;
+  background-color: black;
+  position: fixed;
+  border: 1px solid black;
+  z-index:11;
+  height: 50px;
+  width: 143px;
+  border-radius: 10px;
+}
+.big-rectangle.b-right-r{
+  left: $x-position+672;
+}
+.big-rectangle.b-left-r{
+  left: $x-position+472;
+}
+
+.big-white-rectangle {
+  top: $y-position+464;
+  background-color: white;
+  position: fixed;
+  border: 1px solid black;
+  z-index:11;
+  height: 50px;
+  width: 65px;
+  border-radius: 10px;
+}
+.big-white-rectangle.w-r-left{
+  left: $x-position+540;
+}
+.big-white-rectangle.w-r-right{
+  left: $x-position+472;
+}
+
+#keyboard-table{
+  top: $y-position+345;
+  left: $x-position+470;
+  position: fixed;
+  z-index:11;
+  display: table;
+  padding: 0;
+  border-collapse: collapse;
+}
+.keyboard {
+  height: 100%;
+  width: 100%;
+  padding:0;
+  background-color: #555;
+  border-radius: 10px;
+  background-color: #47A5DB;
+  border: 1px solid black;
+}
+
+#keyboard-table td {
+  height: 45px;
+  width: 67px;
+}
+.yellow-circle {
+  position: fixed;
+  z-index:11;
+  border-radius: 50%;
+  top: $y-position+475;
+  left: $x-position+770;
+  position: fixed;
+  height: 38px;
+  width: 38px;
+  background: linear-gradient(to right bottom, #f1eed8, #fbdd22, #b8a322, #988821, #7a6d1e);
+}
+
+
+

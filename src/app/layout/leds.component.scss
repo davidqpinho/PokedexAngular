@@ -1,0 +1,34 @@
+@import '../../scss/vars';
+
+.circle {
+  position: fixed;
+  z-index:10;
+  border-radius: 50%;
+}
+.circle.camera {
+  top: $y-position+20;
+  left: $x-position+20;
+  border: 8px solid #E4E6EC;
+  position: fixed;
+  height: 65px;
+  width: 65px;
+  background-color: #47A5DB;
+}
+.circle.led{
+  top: $y-position+25;
+  height: 23px;
+  width: 23px;
+  background-color: #555;
+}
+.circle.led.l-red{
+  left: $x-position+120;
+  background-color: #9E2023;
+}
+.circle.led.l-yellow{
+  left: $x-position+160;
+  background-color: #AD9A34;
+}
+.circle.led.l-green{
+  left: $x-position+200;
+  background-color: #2D6C3D;
+}

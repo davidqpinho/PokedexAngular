@@ -1,0 +1,72 @@
+@import '../../scss/vars';
+
+.screen-place {
+  position: fixed;
+  z-index:11;
+  height: 280px;
+  width: 300px;
+  border-radius: 15px;
+  top: $y-position+170;
+  left: $x-position+50;
+  background-color: #E1E3E2;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+}
+
+.screen-place:before {
+  content: '';
+  position: absolute;
+  top: 235px;
+  left: -3px;
+  width: 0;
+  height: 0;
+  border-bottom: 65px solid #DF1E31;
+  border-right: 65px solid transparent;
+}
+
+#screen-table{
+  top: $y-position+415;
+  left: $x-position+268;
+  position: fixed;
+  z-index:11;
+  display: table;
+  padding: 0;
+  border-collapse: collapse;
+}
+.screen-lines {
+  padding:1px;
+  background-color: #555;
+  border-radius: 10px;
+  background-color: black;
+  border: 0.8px solid black;
+}
+
+#screen-table td {
+  padding:1.7px;
+  height: 1px;
+  width: 45px;
+}
+.screen-led {
+  position: fixed;
+  z-index:11;
+  border-radius: 50%;
+  background-color: red;
+}
+.screen-led.s-l-left {
+  height: 10px;
+  width: 10px;
+  top: $y-position+180;
+  left: $x-position+174;
+}
+.screen-led.s-l-right {
+  height: 10px;
+  width: 10px;
+  top: $y-position+180;
+  left: $x-position+216
+}
+.screen-led.b-led {
+  height: 20px;
+  width: 20px;
+  top: $y-position+423;
+  left: $x-position+105;
+}

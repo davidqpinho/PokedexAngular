@@ -1,0 +1,128 @@
+@import '../../scss/vars';
+
+.teste {
+  left: $x-position+100;
+  top: $y-position+0;
+  position: fixed;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-color: #555;
+}
+
+.big-area {
+  left: $x-position+0;
+  top: $y-position+0;
+  position: fixed;
+  display: inline-block;
+  height: 640px;
+  width: 445px;
+  background-color: #DF1E31;
+  border-radius: 15px;
+  z-index:-2;
+  border: 2px solid black;
+}
+.top-area-top {
+  top: $y-position+0;
+  left: $x-position+2;
+  position: fixed;
+  display: inline-block;
+  width: 445px;
+  z-index:2;
+  position: fixed;
+  display: inline-block;
+  height: 64px;
+  background-color: #DF1E31;
+  border-radius: 15px 15px 0 15px;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+.top-area-top:after {
+  content:"";
+  display:block;
+  margin: 0 auto;
+  width: 55px;
+  padding-bottom: 64px;
+  border-bottom: 2px solid #DF1E31;
+}
+.top-area-bottom {
+  top: $y-position+50;
+  left: $x-position+0;
+  position: fixed;
+  display: inline-block;
+  width: 195px;
+  z-index:3;
+  right: 0;
+  position: fixed;
+  display: inline-block;
+  height: 72px;
+  background-color: #DF1E31;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+
+}
+.top-area-triangle {
+  left: $x-position+223px;
+  top: $y-position+66px;
+  position: fixed;
+  z-index:4;
+  display: inline-block;
+  transform: skew(315deg);
+  height: 58px;
+  width: 29px;
+  background-color: transparent;
+  border-left: 2px solid black;
+}
+.cover-top-rec {
+  left: $x-position+477;
+  top: $y-position+67;
+  transform:skew(45deg);
+  position: fixed;
+  display: inline-block;
+  height: 55px;
+  width: 192px;
+  background-color: #DF1E31;
+  z-index:10;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+}
+.cover-top {
+  left: $x-position+447;
+  top: $y-position+67;
+  position: fixed;
+  display: inline-block;
+  height: 55px;
+  width: 192px;
+  background-color: #DF1E31;
+  z-index:10;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+.cover-bottom-f {
+  left: $x-position+447;
+  top: $y-position+124;
+  position: fixed;
+  display: inline-block;
+  height: 517px;
+  width: 250px;
+  background-color: #DF1E31;
+  z-index:10;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-bottom-left-radius: 15px;
+}
+.cover-bottom-s {
+  left: $x-position+697;
+  top: $y-position+122;
+  position: fixed;
+  display: inline-block;
+  height: 517px;
+  width: 195px;
+  background-color: #DF1E31;
+  z-index:10;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-bottom-right-radius: 15px;
+}
+
