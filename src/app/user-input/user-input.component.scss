@@ -11,6 +11,7 @@
   border: 0px;
   color:white;
   z-index:10;
+  outline: none;
 }
 #returnButtom:active {
   background-color: $std-black-active;
@@ -27,6 +28,7 @@
   border: 0;
   font-size: 2em;
   color:rgb(40, 97, 32);
+  outline: none;
 }
 #enterButtom:active {
   background-color: $green-btn-active;
