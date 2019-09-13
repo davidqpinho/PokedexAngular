@@ -10,12 +10,12 @@
 }
 
 .small-rectangle.r-red {
-  top: $y-position+475;
+  top: $y-position+468;
   left: $x-position+95;
   background-color: #47A5DB;
 }
 .small-rectangle.r-blue{
-  top: $y-position+475;
+  top: $y-position+468;
   left: $x-position+175;
   background-color: #555;
 }
@@ -99,6 +99,38 @@
   width: 38px;
   background: linear-gradient(to right bottom, #f1eed8, #fbdd22, #b8a322, #988821, #7a6d1e);
 }
+#arrow-buttons{
+  top: $y-position+490px;
+  left: $x-position+235px;
+  position: fixed;
+  z-index:15;
+  display: table;
+  padding: 0px;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+.arrow-key {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
 
+#arrow-buttons TD {
+  height: 38px;
+  width: 38px;
+  padding:0px;
+}
+#arrow-r-buttom{
+  border-radius:0px 10px 10px 0px;
+}
+#arrow-l-buttom{
+  border-radius:10px 0px 0px 10px;
+}
+#arrow-t-buttom{
+  border-radius:10px 10px 0px 0px;
+}
+#arrow-b-buttom{
+  border-radius:0px 0px 10px 10px;
+}
 
 

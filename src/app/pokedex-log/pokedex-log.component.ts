@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { LogScreenService } from '../main-screen/shared/log-screen.service';
 
 @Component({
   selector: 'app-pokedex-log',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokedex-log.component.scss']
 })
 export class PokedexLogComponent implements OnInit {
-
-  constructor() { }
+  description: string;
+  constructor(
+    private logEmitter: LogScreenService
+  ) {
+    this.logEmitter.logListener.subscribe((message: string) => {
+      this.description = message;
+    });
+  }
 
   ngOnInit() {
   }
-
+  OnDestroy() {
+  }
 }

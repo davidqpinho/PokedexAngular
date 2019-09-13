@@ -1,0 +1,26 @@
+<div class="card text-white bg-dark mb-3 pokemons-card" style="max-width: 18rem;">
+  <div class="card-header">Selecione um Pokemon</div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card pokemonBox" id="style-1" >
+        <ul class="list-group list-group-flush ">
+          <li *ngFor="let pokemon of pokemonListOutput" class="list-group-item"
+          bg-primary
+          [ngClass]="{
+            'bg-primary':pokemon.number !== selectorPosition,
+            'bg-warning':pokemon.number === selectorPosition
+          }">
+            <div class="pok-selector"(click)="pokemonSelection(pokemon.number)">
+                <span class="pokemon-number">Nº&nbsp;{{pokemon.number}} &nbsp;</span>
+                <span class="pokemon-name">{{pokemon.name}} &nbsp;
+                <img src="assets/img/PokeBall-icon-24px.png"></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+

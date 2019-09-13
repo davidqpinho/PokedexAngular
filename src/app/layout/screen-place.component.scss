@@ -21,11 +21,11 @@
   width: 0;
   height: 0;
   border-bottom: 65px solid #DF1E31;
-  border-right: 65px solid transparent;
+  border-right: 50px solid transparent;
 }
 
 #screen-table{
-  top: $y-position+415;
+  top: $y-position+413;
   left: $x-position+268;
   position: fixed;
   z-index:11;
@@ -67,6 +67,7 @@
 .screen-led.b-led {
   height: 20px;
   width: 20px;
-  top: $y-position+423;
-  left: $x-position+105;
+  top: $y-position+418;
+  left: $x-position+90;
 }
+

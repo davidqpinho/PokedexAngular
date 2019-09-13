@@ -24,26 +24,20 @@
 }
 .top-area-top {
   top: $y-position+0;
-  left: $x-position+2;
+  left: $x-position+253;
   position: fixed;
   display: inline-block;
-  width: 445px;
+  width: 194px;
   z-index:2;
   position: fixed;
   display: inline-block;
   height: 64px;
   background-color: #DF1E31;
-  border-radius: 15px 15px 0 15px;
+  border-top-right-radius: 15px;
   border-bottom: 2px solid black;
   border-top: 2px solid black;
-}
-.top-area-top:after {
-  content:"";
-  display:block;
-  margin: 0 auto;
-  width: 55px;
-  padding-bottom: 64px;
-  border-bottom: 2px solid #DF1E31;
+  border-right: 2px solid black;
+
 }
 .top-area-bottom {
   top: $y-position+50;
@@ -59,16 +53,15 @@
   background-color: #DF1E31;
   border-bottom: 2px solid black;
   border-left: 2px solid black;
-
 }
 .top-area-triangle {
   left: $x-position+223px;
-  top: $y-position+66px;
+  top: $y-position+62px;
   position: fixed;
   z-index:4;
   display: inline-block;
   transform: skew(315deg);
-  height: 58px;
+  height: 60px;
   width: 29px;
   background-color: transparent;
   border-left: 2px solid black;
@@ -87,7 +80,7 @@
   border-right: 2px solid black;
 }
 .cover-top {
-  left: $x-position+447;
+  left: $x-position+445;
   top: $y-position+67;
   position: fixed;
   display: inline-block;
@@ -99,8 +92,8 @@
   border-left: 2px solid black;
 }
 .cover-bottom-f {
-  left: $x-position+447;
-  top: $y-position+124;
+  left: $x-position+445;
+  top: $y-position+122;
   position: fixed;
   display: inline-block;
   height: 517px;
@@ -112,7 +105,7 @@
   border-bottom-left-radius: 15px;
 }
 .cover-bottom-s {
-  left: $x-position+697;
+  left: $x-position+695;
   top: $y-position+122;
   position: fixed;
   display: inline-block;

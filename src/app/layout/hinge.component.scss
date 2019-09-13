@@ -1,8 +1,8 @@
 @import '../../scss/vars';
 
 .hinge-pokedex {
-  left: $x-position+410;
-  top: $y-position+66;
+  left: $x-position+412;
+  top: $y-position+62;
   position: fixed;
   display: inline-block;
   height: 570px;
@@ -14,7 +14,7 @@
   border: 2px solid black;
 }
 .hinge-cover {
-  left: $x-position+410;
+  left: $x-position+412;
   position: fixed;
   display: inline-block;
   height: 60px;

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserInputService } from '../main-screen/shared/user-input.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-input',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserInputComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private inputService: UserInputService,
+    private route: Router
+  ) {
+
+  }
 
   ngOnInit() {
   }
-
+  returnFunction() {
+    if (this.route.url !== '/pokemons') {
+        this.inputService.returnButton.next(true);
+    }
+  }
+  enterFunction() {
+    if (this.route.url === '/pokemons') {
+      this.inputService.enterButton.next(true);
+    }
+  }
 }

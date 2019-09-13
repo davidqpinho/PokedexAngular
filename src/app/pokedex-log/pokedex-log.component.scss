@@ -1,0 +1,21 @@
+@import '../../scss/vars';
+
+.log-screen {
+  position: fixed;
+  z-index:15;
+  border-radius: 10px;
+  top: $y-position+185;
+  left: $x-position+470;
+  width: 340px;
+  height: 110px;
+  background: black;
+}
+.description{
+  padding: 0.9em 1.5em;
+  color:rgb(10, 204, 10);
+  height: 97px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.75em;
+  font-family:courier, courier new, serif;
+}

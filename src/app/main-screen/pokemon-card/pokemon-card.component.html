@@ -1,0 +1,27 @@
+<div class="card text-white bg-dark  mb-3 pokemon-card">
+    <div class="card-header">
+        <span class=""><img src="assets/img/PokeBall-icon-24px.png">
+        &nbsp;{{pokemonCard.name}}</span>
+    </div>
+    <div class="card-body">
+        <div class="row">
+          <div class="col-6"><img [src]="pokemonCard.sprite"></div>
+          <div class="col-6 ul list-group">
+            <div class="row detail" >
+              <span class="characteristics">Nº:</span>
+              <span class="ch-value">{{pokemonCard.id}}</span>
+            </div>
+            <div class="row detail">
+                <span class="characteristics">Height:</span>
+                <span class="ch-value">{{pokemonCard.height}}</span>
+            </div>
+            <div class="row detail">
+                 <span class="characteristics">Weight:</span>
+                 <span class="ch-value">{{pokemonCard.weight}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">Types:&nbsp;{{pokemonCard.types}}</div>
+    </div>
+</div>
+

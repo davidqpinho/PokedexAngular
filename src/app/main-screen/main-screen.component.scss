@@ -1,0 +1,12 @@
+@import '../../scss/vars';
+.screen {
+  position: fixed;
+  z-index:15;
+  height: 210px;
+  width: 255px;
+  border-radius: 10px;
+  top: $y-position+200;
+  left: $x-position+70;
+  background-color: #E1E3E2;
+  border: 2px solid black;
+}

@@ -1,0 +1,46 @@
+.pokemons-card{
+  height: 100%;
+}
+.card-header{
+  text-align: center;
+}
+.pok-selector{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size:15px;
+  vertical-align: middle;
+  color: rgb(71, 64, 64);
+}
+.pokemon-name{
+  display: block;
+  float: right;
+}
+.bg-warning .pokemon-number{
+  color: white;
+}
+.bg-primary .pokemon-number{
+  color: orange;
+}
+.pokemonBox{
+  max-height: 150px;
+  min-width: 100%;
+  overflow-y: scroll;
+}
+/* width */
+#style-1::-webkit-scrollbar {
+    width: 20px;
+}
+/* Track */
+#style-1::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+/* Handle */
+#style-1::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+}
+/* Handle on hover */
+#style-1::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+

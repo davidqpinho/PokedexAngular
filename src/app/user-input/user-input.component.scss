@@ -1,0 +1,25 @@
+@import '../../scss/vars';
+ #returnButtom {
+  top: $y-position+490;
+  left: $x-position+23;
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color:  black;
+  font-size: 1.5em;
+  border: 0px;
+  color:white;
+  z-index:10;
+}
+#enterButtom {
+  top: $y-position+520;
+  left: $x-position+98;
+  position: fixed;
+  width: 112px;
+  height: 70px;
+  background: rgb(71, 146, 61);
+  z-index:10;
+  border-radius: 10px;
+  border: 0;
+}
