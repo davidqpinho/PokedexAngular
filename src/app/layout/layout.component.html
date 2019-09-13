@@ -10,10 +10,14 @@
 <div class="top-area-top"></div>
 <div class="top-area-bottom"></div>
 <div class="top-area-triangle"></div>
-<div class="circle camera l-blue"></div>
-<div class="circle led l-red"></div>
-<div class="circle led l-green"></div>
-<div class="circle led l-yellow"></div>
+<div class="circle camera l-blue"
+[ngStyle]="{'animation': blinkPokemonCard ? 'flashBigLight 1s linear 1' : 'null' }"></div>
+<div class="circle led l-red"
+[ngStyle]="{'animation': blinkPokemonList ? 'flashRedLed 1s linear 1' : 'null' }"></div>
+<div class="circle led l-green"
+[ngStyle]="{'animation': blinkPokemonList ? 'flashGreenLed 1s linear 1' : 'null' }"></div>
+<div class="circle led l-yellow"
+[ngStyle]="{'animation': blinkPokemonList ? 'flashYellowLed 1s linear 1' : 'null' }"></div>
 <div class="cover-top"></div>
 <div class="cover-top-rec"></div>
 <div class="cover-bottom-f"></div>
@@ -86,5 +90,5 @@
             <TD><div></div></TD>
           </TR>
       </TBODY>
-</table>>
+</table>
 

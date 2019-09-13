@@ -16,7 +16,7 @@ import { Page404Component } from './page404/page404.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LogScreenService } from './main-screen/shared/log-screen.service';
 import { UserInputService } from './main-screen/shared/user-input.service';
-
+import { AnimationService } from './main-screen/shared/animation.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,8 +37,9 @@ import { UserInputService } from './main-screen/shared/user-input.service';
     PokemonApiService,
     PokemonListResolver,
     LogScreenService,
-    UserInputService
+    UserInputService,
+    AnimationService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -12,28 +12,28 @@
 .small-rectangle.r-red {
   top: $y-position+468;
   left: $x-position+95;
-  background-color: #47A5DB;
+  background-color: $red-rect;
 }
 .small-rectangle.r-blue{
   top: $y-position+468;
   left: $x-position+175;
-  background-color: #555;
+  background-color: $blue-rect;
 }
 .small-rectangle.r-f-black{
   height: 7px;
   top: $y-position+448;
   left: $x-position+705;
-  background-color: black;
+  background-color: $std-black;
 }
 .small-rectangle.r-s-black{
   height: 7px;
   top: $y-position+448;
   left: $x-position+760;
-  background-color: black;
+  background-color: $std-black;
 }
 .big-rectangle {
   top: $y-position+534;
-  background-color: black;
+  background-color: $std-black;
   position: fixed;
   border: 1px solid black;
   z-index:11;
@@ -50,13 +50,14 @@
 
 .big-white-rectangle {
   top: $y-position+464;
-  background-color: white;
+  background-color: $white-btns;
   position: fixed;
   border: 1px solid black;
   z-index:11;
   height: 50px;
   width: 65px;
   border-radius: 10px;
+  box-shadow: 2px 2px 0px 0px;
 }
 .big-white-rectangle.w-r-left{
   left: $x-position+540;
@@ -78,10 +79,10 @@
   height: 100%;
   width: 100%;
   padding:0;
-  background-color: #555;
   border-radius: 10px;
-  background-color: #47A5DB;
+  background-color: $blue-keyboard;
   border: 1px solid black;
+  box-shadow: 2px 2px 0px 0px;
 }
 
 #keyboard-table td {
@@ -97,6 +98,7 @@
   position: fixed;
   height: 38px;
   width: 38px;
+  box-shadow: 2px 2px 0px 0px;
   background: linear-gradient(to right bottom, #f1eed8, #fbdd22, #b8a322, #988821, #7a6d1e);
 }
 #arrow-buttons{
@@ -112,7 +114,7 @@
 .arrow-key {
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: $std-black;
 }
 
 #arrow-buttons TD {

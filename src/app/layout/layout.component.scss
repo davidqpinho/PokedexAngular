@@ -1,15 +1,4 @@
 @import '../../scss/vars';
-
-.teste {
-  left: $x-position+100;
-  top: $y-position+0;
-  position: fixed;
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  background-color: #555;
-}
-
 .big-area {
   left: $x-position+0;
   top: $y-position+0;
@@ -17,7 +6,7 @@
   display: inline-block;
   height: 640px;
   width: 445px;
-  background-color: #DF1E31;
+  background-color: $pokedex-color;
   border-radius: 15px;
   z-index:-2;
   border: 2px solid black;
@@ -32,7 +21,7 @@
   position: fixed;
   display: inline-block;
   height: 64px;
-  background-color: #DF1E31;
+  background-color: $pokedex-color;
   border-top-right-radius: 15px;
   border-bottom: 2px solid black;
   border-top: 2px solid black;
@@ -50,7 +39,7 @@
   position: fixed;
   display: inline-block;
   height: 72px;
-  background-color: #DF1E31;
+  background-color: $pokedex-color;
   border-bottom: 2px solid black;
   border-left: 2px solid black;
 }
@@ -74,7 +63,7 @@
   display: inline-block;
   height: 55px;
   width: 192px;
-  background-color: #DF1E31;
+  background-color: $pokedex-color;
   z-index:10;
   border-top: 2px solid black;
   border-right: 2px solid black;
@@ -86,32 +75,34 @@
   display: inline-block;
   height: 55px;
   width: 192px;
-  background-color: #DF1E31;
+  background-color: $pokedex-color;
   z-index:10;
   border-top: 2px solid black;
   border-left: 2px solid black;
 }
 .cover-bottom-f {
+  padding:0px;
   left: $x-position+445;
   top: $y-position+122;
   position: fixed;
   display: inline-block;
   height: 517px;
   width: 250px;
-  background-color: #DF1E31;
+  background-color: $pokedex-color;
   z-index:10;
   border-left: 2px solid black;
   border-bottom: 2px solid black;
   border-bottom-left-radius: 15px;
 }
 .cover-bottom-s {
+  padding:0px;
   left: $x-position+695;
   top: $y-position+122;
   position: fixed;
   display: inline-block;
   height: 517px;
   width: 195px;
-  background-color: #DF1E31;
+  background-color: $pokedex-color;
   z-index:10;
   border-top: 2px solid black;
   border-right: 2px solid black;

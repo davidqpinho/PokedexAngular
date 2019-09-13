@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimationService } from '../main-screen/shared/animation.service';
 
 @Component({
   selector: 'app-layout',
@@ -12,9 +13,23 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class LayoutComponent implements OnInit {
+  blinkPokemonCard: boolean;
+  blinkPokemonList: boolean;
 
-
-  constructor() { }
+  constructor(
+    private animationService: AnimationService
+  ) {
+    this.blinkPokemonCard = false;
+    this.blinkPokemonList = false;
+    this.animationService.pokemonCard.subscribe(() => {
+      this.blinkPokemonCard = true;
+      setTimeout(() => { this.blinkPokemonCard = false; }, 1000);
+    });
+    this.animationService.pokemonList.subscribe(() => {
+      this.blinkPokemonList = true;
+      setTimeout(() => { this.blinkPokemonList = false; }, 1500);
+    });
+  }
 
   ngOnInit() {
   }

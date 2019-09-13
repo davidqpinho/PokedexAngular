@@ -1,4 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import './vars';
+html {
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background:$gradient-background;
+  background-repeat:no-repeat;
+  background: -webkit-linear-gradient( to left top, $gradient-color-one, $gradient-color-two);
+  background: -moz-linear-gradient( to left top, $gradient-color-one, $gradient-color-two);
+  background: -ms-linear-gradient( to left top, $gradient-color-one, $gradient-color-two);
+  background: -o-linear-gradient( to left top, $gradient-color-one, $gradient-color-two);
+  background: linear-gradient( to left top, $gradient-color-one, $gradient-color-two);
+}
 
 
 

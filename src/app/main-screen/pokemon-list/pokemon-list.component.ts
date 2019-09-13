@@ -5,6 +5,7 @@ import { IPokemonList } from '../shared/pokemon.model';
 import { UserInputService } from '../shared/user-input.service';
 import { Subject } from 'rxjs';
 import { LogScreenService } from '../shared/log-screen.service';
+import { AnimationService } from '../shared/animation.service';
 
 @Component({
   templateUrl: './pokemon-list.component.html',
@@ -13,12 +14,14 @@ import { LogScreenService } from '../shared/log-screen.service';
 export class PokemonListComponent implements OnInit, OnDestroy {
   pokemonListOutput;
   selectorPosition: number;
+
      constructor(
        private pokemonApi: PokemonApiService,
        private route: ActivatedRoute,
        private router: Router,
        private inputService: UserInputService,
-       private logEmitter: LogScreenService
+       private logEmitter: LogScreenService,
+       private animationService: AnimationService
      ) {
       this.selectorPosition = 0;
       this.inputService.enterButton = new Subject();
@@ -34,6 +37,7 @@ export class PokemonListComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.pokemonListOutput = this.returnPokemonList(this.route.snapshot.data['pokemons']);
         setTimeout(() => {this.logEmitter.logListener.next('Get a pokemon!!!'); }, 200);
+        setTimeout(() => {this.animationService.pokemonList.next(true); }, 200);
      }
     returnPokemonList(jsonFile: IPokemonList) {
       const pokemonList = new Array();

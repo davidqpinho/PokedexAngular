@@ -4,6 +4,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { LogScreenService } from '../shared/log-screen.service';
 import { UserInputService } from '../shared/user-input.service';
 import { Subject } from 'rxjs';
+import { AnimationService } from '../shared/animation.service';
 
 @Component({
   selector: 'app-pokemon-card',
@@ -18,7 +19,8 @@ export class PokemonCardComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private logEmitter: LogScreenService,
     private inputService: UserInputService,
-    private router: Router
+    private router: Router,
+    private animationService: AnimationService
   ) {
     this.pokemonCard = {
       name: '',
@@ -49,6 +51,7 @@ export class PokemonCardComponent implements OnInit, OnDestroy {
           this.pokemonCard.types = this.returnStringTypes(pokemon.types);
           this.pokemonCard.sprite = pokemon.sprites.front_default;
           this.pokemonCard.description = '';
+          setTimeout(() => {this.animationService.pokemonCard.next(true); }, 200);
       }});
       this.pokemonApi.getPokemonDescription(pokemonId).subscribe((pokemon: any) => {
         if (typeof pokemon !== 'undefined') {

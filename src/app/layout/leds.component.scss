@@ -14,6 +14,7 @@
   width: 65px;
   background-color: #47A5DB;
 }
+
 .circle.led{
   top: $y-position+25;
   height: 23px;
@@ -23,12 +24,83 @@
 .circle.led.l-red{
   left: $x-position+120;
   background-color: #9E2023;
+  animation-delay: 600ms;
 }
 .circle.led.l-yellow{
   left: $x-position+160;
   background-color: #AD9A34;
+  animation-delay: 300ms;
 }
 .circle.led.l-green{
   left: $x-position+200;
   background-color: #2D6C3D;
+}
+
+@keyframes flashBigLight {
+  0%,5% {
+     color: #fff;
+     filter: blur(2px);
+     box-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff,
+                 0 0 40px #00b3ff,
+                 0 0 80px #00b3ff,
+                 0 0 120px #00b3ff,
+                 0 0 200px #00b3ff,
+                 0 0 300px #00b3ff,
+                 0 0 400px #00b3ff;
+  }
+  5%,95%
+  {
+     color: #111;
+     filter: blur(0px);
+  }
+}
+
+@keyframes flashRedLed {
+  from {background-color: #9E2023;}
+  to {background-color: red;}
+  0%,25% {
+     color: rgb(252, 248, 248);
+     filter: blur(2px);
+     box-shadow: 0 0 10px rgb(248, 81, 81),
+                 0 0 20px rgb(248, 81, 81),
+                 0 0 40px rgb(248, 81, 81),
+                 0 0 80px rgb(248, 81, 81),
+                 0 0 120px rgb(248, 81, 81),
+                 0 0 200px rgb(248, 81, 81),
+                 0 0 300px rgb(248, 81, 81),
+                 0 0 400px rgb(248, 81, 81);
+  }
+}
+@keyframes flashYellowLed {
+  from {background-color: #AD9A34;}
+  to {background-color: yellow;}
+  0%,25% {
+     color: rgb(252, 248, 248);
+     filter: blur(2px);
+     box-shadow: 0 0 10px rgb(255, 255, 91),
+                 0 0 20px rgb(255, 255, 91),
+                 0 0 40px rgb(255, 255, 91),
+                 0 0 80px rgb(255, 255, 91),
+                 0 0 120px rgb(255, 255, 91),
+                 0 0 200px rgb(255, 255, 91),
+                 0 0 300px rgb(255, 255, 91),
+                 0 0 400px rgb(255, 255, 91);
+  }
+}
+@keyframes flashGreenLed {
+  from {background-color: #2D6C3D;}
+  to {background-color: rgb(0, 255, 0);}
+  0%,25% {
+     color: rgb(252, 248, 248);
+     filter: blur(2px);
+     box-shadow: 0 0 10px rgb(97, 255, 97),
+                 0 0 20px rgb(97, 255, 97),
+                 0 0 40px rgb(97, 255, 97),
+                 0 0 80px rgb(97, 255, 97),
+                 0 0 120px rgb(97, 255, 97),
+                 0 0 200px rgb(97, 255, 97),
+                 0 0 300px rgb(97, 255, 97),
+                 0 0 400px rgb(97, 255, 97);
+  }
 }
