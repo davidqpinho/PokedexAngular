@@ -43,7 +43,7 @@ export class PokemonApiService {
   }
   private handleDescriptionError <T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
-      this.logEmitter.logListener.next('There is no description for this Pokemon.')
+      this.logEmitter.logListener.next('There is no description for this pokemon.')
       return of(result as T);
     };
   }
