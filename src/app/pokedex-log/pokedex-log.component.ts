@@ -6,18 +6,37 @@ import { LogScreenService } from '../main-screen/shared/log-screen.service';
   templateUrl: './pokedex-log.component.html',
   styleUrls: ['./pokedex-log.component.scss']
 })
-export class PokedexLogComponent implements OnInit {
+
+export class PokedexLogComponent implements OnInit, OnDestroy {
+
   description: string;
-  constructor(
-    private logEmitter: LogScreenService
-  ) {
+  logScreen;
+
+  constructor( private logEmitter: LogScreenService ) {
     this.logEmitter.logListener.subscribe((message: string) => {
-      this.description = message;
+    this.logScreenWriter(message);
     });
   }
 
-  ngOnInit() {
+  logScreenWriter(message: string) {
+    const dLength = message.length;
+    this.description = '';
+    let count = 0;
+    this.logScreen = setInterval(() => {
+      if (count >= dLength) {
+        clearInterval(this.logScreen);
+      } else {
+        this.description += message[count];
+        count++;
+      }
+    }, 10);
   }
-  OnDestroy() {
+
+  ngOnInit() {
+
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.logScreen);
   }
 }

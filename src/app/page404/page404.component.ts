@@ -25,7 +25,8 @@ export class Page404Component implements OnInit, OnDestroy {
   ngOnInit() {
 
   }
-  ngOnDestroy(){
+
+  ngOnDestroy() {
     this.inputService.returnButton.unsubscribe();
   }
 

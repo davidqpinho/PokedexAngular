@@ -1,7 +1,69 @@
 @import '../../scss/vars';
 
+@media (max-width: $mobile-mode-size) {
+  .small-rectangle.r-red {
+    top: $y-position-mobile+468 !important;
+    left: $x-position-mobile+95 !important;
+  }
+
+  .small-rectangle.r-blue {
+    top: $y-position-mobile+468 !important;
+    left: $x-position-mobile+175 !important;
+  }
+
+  #arrow-buttons{
+    top: $y-position-mobile+490px !important;
+    left: $x-position-mobile+235px !important;
+  }
+
+  /*cover*/
+  .small-rectangle.r-f-black{
+    top: $y-position-mobile+$y-mobile-offset+448 !important;
+    left: $x-position-mobile+$x-mobile-offset+705 !important;
+  }
+
+  .small-rectangle.r-s-black{
+    top: $y-position-mobile+$y-mobile-offset+448 !important;
+    left: $x-position-mobile+$x-mobile-offset+760 !important;
+  }
+
+  .big-rectangle {
+    top: $y-position-mobile+$y-mobile-offset+534 !important;
+  }
+
+  .big-rectangle.b-right-r{
+    left: $x-position-mobile+$x-mobile-offset+672 !important;
+  }
+
+  .big-rectangle.b-left-r{
+    left: $x-position-mobile+$x-mobile-offset+472 !important;
+  }
+
+  .big-white-rectangle {
+    top: $y-position-mobile+$y-mobile-offset+464 !important;
+  }
+
+  .big-white-rectangle.w-r-left {
+    left: $x-position-mobile+$x-mobile-offset+540 !important;
+  }
+
+  .big-white-rectangle.w-r-right {
+    left: $x-position-mobile+$x-mobile-offset+472 !important;
+  }
+
+  #keyboard-table{
+    top: $y-position-mobile+$y-mobile-offset+345 !important;
+    left: $x-position-mobile+$x-mobile-offset+470 !important;
+  }
+
+  .yellow-circle {
+    top: $y-position-mobile+$y-mobile-offset+475 !important;
+    left: $x-position-mobile+$x-mobile-offset+770 !important;
+  }
+}
+
 .small-rectangle {
-  position: fixed;
+  position: absolute;
   border: 1px solid black;
   z-index:11;
   height: 5px;
@@ -14,36 +76,42 @@
   left: $x-position+95;
   background-color: $red-rect;
 }
-.small-rectangle.r-blue{
+
+.small-rectangle.r-blue {
   top: $y-position+468;
   left: $x-position+175;
   background-color: $blue-rect;
 }
+
 .small-rectangle.r-f-black{
   height: 7px;
   top: $y-position+448;
   left: $x-position+705;
   background-color: $std-black;
 }
+
 .small-rectangle.r-s-black{
   height: 7px;
   top: $y-position+448;
   left: $x-position+760;
   background-color: $std-black;
 }
+
 .big-rectangle {
   top: $y-position+534;
   background-color: $std-black;
-  position: fixed;
+  position: absolute;
   border: 1px solid black;
   z-index:11;
   height: 50px;
   width: 143px;
   border-radius: 10px;
 }
+
 .big-rectangle.b-right-r{
   left: $x-position+672;
 }
+
 .big-rectangle.b-left-r{
   left: $x-position+472;
 }
@@ -51,7 +119,7 @@
 .big-white-rectangle {
   top: $y-position+464;
   background-color: $white-btns;
-  position: fixed;
+  position: absolute;
   border: 1px solid black;
   z-index:11;
   height: 50px;
@@ -59,9 +127,11 @@
   border-radius: 10px;
   box-shadow: 2px 2px 0px 0px;
 }
+
 .big-white-rectangle.w-r-left{
   left: $x-position+540;
 }
+
 .big-white-rectangle.w-r-right{
   left: $x-position+472;
 }
@@ -69,12 +139,13 @@
 #keyboard-table{
   top: $y-position+345;
   left: $x-position+470;
-  position: fixed;
+  position: absolute;
   z-index:11;
   display: table;
   padding: 0;
   border-collapse: collapse;
 }
+
 .keyboard {
   height: 100%;
   width: 100%;
@@ -89,28 +160,31 @@
   height: 45px;
   width: 67px;
 }
+
 .yellow-circle {
-  position: fixed;
+  position: absolute;
   z-index:11;
   border-radius: 50%;
   top: $y-position+475;
   left: $x-position+770;
-  position: fixed;
+  position: absolute;
   height: 38px;
   width: 38px;
   box-shadow: 2px 2px 0px 0px;
   background: linear-gradient(to right bottom, #f1eed8, #fbdd22, #b8a322, #988821, #7a6d1e);
 }
+
 #arrow-buttons{
   top: $y-position+490px;
   left: $x-position+235px;
-  position: fixed;
+  position: absolute;
   z-index:15;
   display: table;
   padding: 0px;
   border-spacing: 0px;
   border-collapse: collapse;
 }
+
 .arrow-key {
   height: 100%;
   width: 100%;
@@ -122,15 +196,19 @@
   width: 38px;
   padding:0px;
 }
+
 #arrow-r-buttom{
   border-radius:0px 10px 10px 0px;
 }
+
 #arrow-l-buttom{
   border-radius:10px 0px 0px 10px;
 }
+
 #arrow-t-buttom{
   border-radius:10px 10px 0px 0px;
 }
+
 #arrow-b-buttom{
   border-radius:0px 0px 10px 10px;
 }

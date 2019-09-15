@@ -1,8 +1,19 @@
 @import '../../scss/vars';
+@media (max-width: $mobile-mode-size)
+{
+  #returnButtom {
+    top: $y-position-mobile+490 !important;
+    left: $x-position-mobile+23 !important;
+  }
+  #enterButtom {
+    top: $y-position-mobile+520 !important;
+    left: $x-position-mobile+98 !important;
+  }
+}
  #returnButtom {
   top: $y-position+490;
   left: $x-position+23;
-  position: fixed;
+  position: absolute;
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -19,7 +30,7 @@
 #enterButtom {
   top: $y-position+520;
   left: $x-position+98;
-  position: fixed;
+  position: absolute;
   width: 112px;
   height: 70px;
   background: $green-btn;

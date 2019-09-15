@@ -1,15 +1,39 @@
 @import '../../scss/vars';
 
+@media (max-width: $mobile-mode-size) {
+  .circle.camera {
+    top: $y-position-mobile+20 !important;
+    left: $x-position-mobile+20 !important;
+  }
+
+  .circle.led{
+    top: $y-position-mobile+25 !important;
+  }
+
+  .circle.led.l-red{
+    left: $x-position-mobile+120 !important;
+  }
+
+  .circle.led.l-yellow{
+    left: $x-position-mobile+160 !important;
+  }
+
+  .circle.led.l-green{
+    left: $x-position-mobile+200 !important;
+  }
+}
+
 .circle {
-  position: fixed;
+  position: absolute;
   z-index:10;
   border-radius: 50%;
 }
+
 .circle.camera {
   top: $y-position+20;
   left: $x-position+20;
   border: 8px solid #E4E6EC;
-  position: fixed;
+  position: absolute;
   height: 65px;
   width: 65px;
   background-color: #47A5DB;
@@ -21,16 +45,19 @@
   width: 23px;
   background-color: #555;
 }
+
 .circle.led.l-red{
   left: $x-position+120;
   background-color: #9E2023;
   animation-delay: 600ms;
 }
+
 .circle.led.l-yellow{
   left: $x-position+160;
   background-color: #AD9A34;
   animation-delay: 300ms;
 }
+
 .circle.led.l-green{
   left: $x-position+200;
   background-color: #2D6C3D;
@@ -72,6 +99,7 @@
                  0 0 400px rgb(248, 81, 81);
   }
 }
+
 @keyframes flashYellowLed {
   from {background-color: #AD9A34;}
   to {background-color: yellow;}
@@ -88,6 +116,7 @@
                  0 0 400px rgb(255, 255, 91);
   }
 }
+
 @keyframes flashGreenLed {
   from {background-color: #2D6C3D;}
   to {background-color: rgb(0, 255, 0);}

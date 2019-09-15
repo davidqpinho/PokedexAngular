@@ -1,6 +1,13 @@
 @import '../../scss/vars';
+@media (max-width: $mobile-mode-size)
+{
+  .screen {
+    top: $y-position-mobile+200 !important;
+    left: $x-position-mobile+70 !important;
+  }
+}
 .screen {
-  position: fixed;
+  position: absolute;
   z-index:15;
   height: 210px;
   width: 255px;

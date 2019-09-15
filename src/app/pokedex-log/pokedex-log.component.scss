@@ -1,7 +1,13 @@
 @import '../../scss/vars';
 
+@media (max-width: $mobile-mode-size) {
+  .log-screen {
+    top: $y-mobile-offset+185 !important;
+    left: $x-mobile-offset +470 !important;
+  }
+}
 .log-screen {
-  position: fixed;
+  position: absolute;
   z-index:15;
   border-radius: 10px;
   top: $y-position+185;
@@ -10,7 +16,7 @@
   height: 110px;
   background: black;
 }
-.description{
+.description {
   padding: 0.9em 1.5em;
   color:rgb(10, 204, 10);
   height: 97px;

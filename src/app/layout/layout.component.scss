@@ -1,8 +1,20 @@
 @import '../../scss/vars';
+
+@media (max-width: $mobile-mode-size) {
+  .big-area {
+    left: $x-position-mobile+0 !important;
+    top: $y-position-mobile+0 !important;
+    height: 675px !important;
+  }
+  .top-area-top {
+    width: 190px !important;
+  }
+}
+
 .big-area {
   left: $x-position+0;
   top: $y-position+0;
-  position: fixed;
+  position: absolute;
   display: inline-block;
   height: 640px;
   width: 445px;
@@ -11,14 +23,15 @@
   z-index:-2;
   border: 2px solid black;
 }
+
 .top-area-top {
-  top: $y-position+0;
-  left: $x-position+253;
-  position: fixed;
+  top: -2px;
+  left: 253px;
+  position: absolute;
   display: inline-block;
   width: 194px;
   z-index:2;
-  position: fixed;
+  position: absolute;
   display: inline-block;
   height: 64px;
   background-color: $pokedex-color;
@@ -26,27 +39,28 @@
   border-bottom: 2px solid black;
   border-top: 2px solid black;
   border-right: 2px solid black;
-
 }
+
 .top-area-bottom {
-  top: $y-position+50;
-  left: $x-position+0;
-  position: fixed;
+  top: 49px;
+  left: -2px;
+  position: absolute;
   display: inline-block;
-  width: 195px;
+  width: 196px;
   z-index:3;
   right: 0;
-  position: fixed;
+  position: absolute;
   display: inline-block;
   height: 72px;
   background-color: $pokedex-color;
   border-bottom: 2px solid black;
   border-left: 2px solid black;
 }
+
 .top-area-triangle {
-  left: $x-position+223px;
-  top: $y-position+62px;
-  position: fixed;
+  left: 223px;
+  top: 60px;
+  position: absolute;
   z-index:4;
   display: inline-block;
   transform: skew(315deg);
@@ -54,59 +68,5 @@
   width: 29px;
   background-color: transparent;
   border-left: 2px solid black;
-}
-.cover-top-rec {
-  left: $x-position+477;
-  top: $y-position+67;
-  transform:skew(45deg);
-  position: fixed;
-  display: inline-block;
-  height: 55px;
-  width: 192px;
-  background-color: $pokedex-color;
-  z-index:10;
-  border-top: 2px solid black;
-  border-right: 2px solid black;
-}
-.cover-top {
-  left: $x-position+445;
-  top: $y-position+67;
-  position: fixed;
-  display: inline-block;
-  height: 55px;
-  width: 192px;
-  background-color: $pokedex-color;
-  z-index:10;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
-}
-.cover-bottom-f {
-  padding:0px;
-  left: $x-position+445;
-  top: $y-position+122;
-  position: fixed;
-  display: inline-block;
-  height: 517px;
-  width: 250px;
-  background-color: $pokedex-color;
-  z-index:10;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
-  border-bottom-left-radius: 15px;
-}
-.cover-bottom-s {
-  padding:0px;
-  left: $x-position+695;
-  top: $y-position+122;
-  position: fixed;
-  display: inline-block;
-  height: 517px;
-  width: 195px;
-  background-color: $pokedex-color;
-  z-index:10;
-  border-top: 2px solid black;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  border-bottom-right-radius: 15px;
 }
 

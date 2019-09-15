@@ -1,6 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import './vars';
+@media (max-width: 600px)
+{
+  html {
+    height:600px !important;
+    width:2000px !important;
+  }
+}
 html {
+  min-height:1500px;
+  min-width:1500px;
   height: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
