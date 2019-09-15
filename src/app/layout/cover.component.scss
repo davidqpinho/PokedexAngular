@@ -5,7 +5,20 @@
    left: $x-position-mobile+0 !important;
    top: $y-position-mobile+675 !important;
    transform: rotate(180deg);
+   width: 400px !important;
  }
+
+ .cover-top-rec,.cover-top{
+    width: 147px !important;
+ }
+
+ .cover-bottom-f {
+   width: 205px !important;
+ }
+
+ .cover-bottom-s {
+  left: 205px !important;
+  }
 }
 
 .cover{
