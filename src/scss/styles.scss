@@ -1,15 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import './vars';
-@media (max-width: 600px)
+@media (max-width: $mobile-mode-size)
 {
   html {
-    height:600px !important;
-    width:2000px !important;
+    background-size: $mobile-mode-size 1400px !important;
+    max-height: 1400px !important;
+    max-width:$mobile-mode-size !important;
   }
 }
 html {
-  min-height:1500px;
-  min-width:1500px;
+  max-height:1000px;
+  max-width:1600px;
   height: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
