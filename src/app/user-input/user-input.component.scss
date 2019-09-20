@@ -9,6 +9,19 @@
     top: $y-position-mobile+520 !important;
     left: $x-position-mobile+98 !important;
   }
+  #finder{
+    top: $y-position-mobile+700 !important;
+    left: $x-position-mobile + 20 !important;
+  }
+
+  #arrow-buttons{
+    top: $y-position-mobile+490px !important;
+    left: $x-position-mobile+235px !important;
+  }
+  #keyboard-table{
+    top: $y-position-mobile+$y-mobile-offset+320 !important;
+    left: $x-position-mobile+$x-mobile-offset+470 !important;
+  }
 }
  #returnButtom {
   top: $y-position+490;
@@ -41,6 +54,117 @@
   color:rgb(40, 97, 32);
   outline: none;
 }
+
 #enterButtom:active {
   background-color: $green-btn-active;
+}
+
+#finder{
+  top: $y-position+130;
+  left: $x-position+470;
+  max-width: 170px;
+  position: absolute;
+  z-index:15;
+}
+
+
+#arrow-buttons{
+  top: $y-position+490px;
+  left: $x-position+235px;
+  position: absolute;
+  z-index:15;
+  display: table;
+  padding: 0px;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+.arrow-key {
+
+  height: 100%;
+  width: 100%;
+  background-color: $std-black;
+}
+
+#arrow-buttons TD {
+  position: relative;
+  height: 38px;
+  width: 38px;
+  padding:0px;
+  color:rgba(0, 0, 0, 0.336);
+}
+#arrow-buttons TD:active {
+  color:rgba(0, 0, 0, 0.5);
+}
+
+#arrow-r-buttom{
+  border-radius:0px 10px 10px 0px;
+}
+
+#arrow-l-buttom{
+  border-radius:10px 0px 0px 10px;
+}
+
+#arrow-t-buttom{
+  border-radius:10px 10px 0px 0px;
+}
+
+#arrow-b-buttom{
+  border-radius:0px 0px 10px 10px;
+}
+
+#keyboard-table{
+  top: $y-position+320;
+  left: $x-position+470;
+  position: absolute;
+  z-index:11;
+  display: table;
+  padding: 0;
+  border-collapse: collapse;
+}
+#keyboard-table TD {
+  position: relative;
+  min-width: 67px;
+  min-height: 45px;
+}
+.keyboard {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding:0;
+  border-radius: 10px;
+  background-color: $blue-keyboard;
+  border: 1px solid black;
+  box-shadow: 2px 2px 0px 0px;
+}
+.keyboard:active{
+  background: $active-blue-keyboard;
+}
+.keyboard span{
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size:15px;
+  text-transform: capitalize;
+}
+#keyboard-table td {
+  height: 45px;
+  width: 67px;
+}
+TD div .fa-play {
+  top: 30%;
+  left:30%;
+  position: absolute;
+}
+.a-left {
+  transform: rotate(180deg);
+}
+.a-down {
+  transform: rotate(90deg);
+}
+.a-up {
+  transform: rotate(270deg);
 }

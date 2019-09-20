@@ -14,6 +14,7 @@ export class PokedexLogComponent implements OnInit, OnDestroy {
 
   constructor( private logEmitter: LogScreenService ) {
     this.logEmitter.logListener.subscribe((message: string) => {
+    clearInterval(this.logScreen);
     this.logScreenWriter(message);
     });
   }

@@ -1,3 +1,60 @@
+<div class="input-group mb-3"  id="finder">
+  <button type="button" class="btn btn-info" (click)="searchPokemon(pokemon)">
+    <i class="fas fa-search"></i>
+  </button>
+  <input [(ngModel)]="pokemon" type="text" class="form-control"
+  placeholder="Pokemon" aria-label="Username" aria-describedby="basic-addon1">
+</div>
 <button id="returnButtom" (click)="returnFunction()"><i class="fas fa-undo"></i></button>
 <button id="enterButtom" (click)="enterFunction()"><i class="fas fa-play"></i></button>
 
+<table id="arrow-buttons">
+  <TBODY>
+      <TR>
+        <TD><div></div></TD>
+        <TD><div #upButton class="arrow-key" (mousedown)="arrowButtons('up','mousedown')"
+          (mouseup)="arrowButtons('up','mouseup')" (mouseleave)="arrowButtons('up','mouseup')"
+          id="arrow-t-buttom">
+            <i class="fas fa-play a-up"></i>
+        </div></TD>
+        <TD><div></div></TD>
+      </TR>
+      <TR>
+        <TD><div class="arrow-key" (mousedown)="arrowButtons('left','mousedown')" id="arrow-l-buttom">
+            <i class="fas fa-play a-left"></i>
+        </div></TD>
+        <TD><div class="arrow-key"></div></TD>
+        <TD><div class="arrow-key" (mousedown)="arrowButtons('right','mousedown')" id="arrow-r-buttom">
+            <i class="fas fa-play"></i>
+        </div></TD>
+      </TR>
+      <TR>
+          <TD><div></div></TD>
+          <TD><div class="arrow-key" (mousedown)="arrowButtons('down', 'mousedown')"
+            (mouseup)="arrowButtons('down','mouseup')"
+            (mouseleave)="arrowButtons('down','mouseup')" id="arrow-b-buttom">
+              <i class="fas fa-play a-down"></i>
+          </div></TD>
+          <TD><div></div></TD>
+        </TR>
+    </TBODY>
+</table>
+
+<TABLE id="keyboard-table">
+  <TBODY>
+    <TR>
+      <TD><div class="keyboard" (click)="languageSelector('en')"><span>en</span></div></TD>
+      <TD><div class="keyboard" (click)="languageSelector('it')"><span>it</span></div></TD>
+      <TD><div class="keyboard" (click)="languageSelector('ja')"><span>ja</span></div></TD>
+      <TD><div class="keyboard" (click)="languageSelector('es')"><span>es</span></div></TD>
+      <TD><div class="keyboard" (click)="languageSelector('de')"><span>de</span></div></TD>
+    </TR>
+    <TR>
+      <TD><div class="keyboard" (click)="languageSelector('fr')"><span>fr</span></div></TD>
+      <TD><div class="keyboard" (click)="languageSelector('ko')"><span>ko</span></div></TD>
+      <TD><div class="keyboard" ></div></TD>
+      <TD><div class="keyboard" ></div></TD>
+      <TD><div class="keyboard" ></div></TD>
+    </TR>
+  </TBODY>
+</TABLE>

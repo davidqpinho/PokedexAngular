@@ -11,11 +11,6 @@
     left: $x-position-mobile+175 !important;
   }
 
-  #arrow-buttons{
-    top: $y-position-mobile+490px !important;
-    left: $x-position-mobile+235px !important;
-  }
-
   /*cover*/
   .small-rectangle.r-f-black{
     top: $y-position-mobile+$y-mobile-offset+448 !important;
@@ -49,11 +44,6 @@
 
   .big-white-rectangle.w-r-right {
     left: $x-position-mobile+$x-mobile-offset+472 !important;
-  }
-
-  #keyboard-table{
-    top: $y-position-mobile+$y-mobile-offset+345 !important;
-    left: $x-position-mobile+$x-mobile-offset+470 !important;
   }
 
   .yellow-circle {
@@ -136,31 +126,6 @@
   left: $x-position+472;
 }
 
-#keyboard-table{
-  top: $y-position+345;
-  left: $x-position+470;
-  position: absolute;
-  z-index:11;
-  display: table;
-  padding: 0;
-  border-collapse: collapse;
-}
-
-.keyboard {
-  height: 100%;
-  width: 100%;
-  padding:0;
-  border-radius: 10px;
-  background-color: $blue-keyboard;
-  border: 1px solid black;
-  box-shadow: 2px 2px 0px 0px;
-}
-
-#keyboard-table td {
-  height: 45px;
-  width: 67px;
-}
-
 .yellow-circle {
   position: absolute;
   z-index:11;
@@ -172,45 +137,6 @@
   width: 38px;
   box-shadow: 2px 2px 0px 0px;
   background: linear-gradient(to right bottom, #f1eed8, #fbdd22, #b8a322, #988821, #7a6d1e);
-}
-
-#arrow-buttons{
-  top: $y-position+490px;
-  left: $x-position+235px;
-  position: absolute;
-  z-index:15;
-  display: table;
-  padding: 0px;
-  border-spacing: 0px;
-  border-collapse: collapse;
-}
-
-.arrow-key {
-  height: 100%;
-  width: 100%;
-  background-color: $std-black;
-}
-
-#arrow-buttons TD {
-  height: 38px;
-  width: 38px;
-  padding:0px;
-}
-
-#arrow-r-buttom{
-  border-radius:0px 10px 10px 0px;
-}
-
-#arrow-l-buttom{
-  border-radius:10px 0px 0px 10px;
-}
-
-#arrow-t-buttom{
-  border-radius:10px 10px 0px 0px;
-}
-
-#arrow-b-buttom{
-  border-radius:0px 0px 10px 10px;
 }
 
 

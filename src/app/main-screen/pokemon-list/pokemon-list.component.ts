@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { PokemonApiService } from './../shared/pokemon-api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IPokemonList } from '../shared/pokemon.model';
@@ -12,6 +12,7 @@ import { AnimationService } from '../shared/animation.service';
   styleUrls: ['./pokemon-list.component.scss']
 })
 export class PokemonListComponent implements OnInit, OnDestroy {
+  @ViewChild('pokeBox') pokeBox;
   pokemonListOutput;
   selectorPosition: number;
 
@@ -38,7 +39,17 @@ export class PokemonListComponent implements OnInit, OnDestroy {
         this.pokemonListOutput = this.returnPokemonList(this.route.snapshot.data['pokemons']);
         setTimeout(() => {this.logEmitter.logListener.next('Get a pokemon!!!'); }, 200);
         setTimeout(() => {this.animationService.pokemonList.next(true); }, 200);
+        this.inputService.scrollButtom = new Subject();
+        this.inputService.scrollButtom.subscribe((button: string) => {
+          if(button === 'up'){
+            this.pokeBox.nativeElement.scrollTop -= 20;
+          }
+          if(button === 'down'){
+            this.pokeBox.nativeElement.scrollTop += 20;
+          }
+        });
      }
+
     returnPokemonList(jsonFile: IPokemonList) {
       const pokemonList = new Array();
       const apiPokemonList = jsonFile.results;
@@ -61,7 +72,7 @@ export class PokemonListComponent implements OnInit, OnDestroy {
       }
       this.selectorPosition = id;
     }
-    ngOnDestroy(){
+    ngOnDestroy() {
       this.inputService.enterButton.unsubscribe();
     }
   }

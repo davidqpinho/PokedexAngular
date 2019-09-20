@@ -5,7 +5,8 @@
     </div>
     <div class="card-body">
         <div class="row">
-          <div class="col-6"><img [src]="pokemonCard.sprite"></div>
+          <div class="col-6"><img *ngIf='!!pokemonCard.sprite[sprites[spritePosition]]'
+            [src]="pokemonCard.sprite[sprites[spritePosition]]" style="max-height: 100px"></div>
           <div class="col-6 ul list-group">
             <div class="row detail" >
               <span class="characteristics">Nº:</span>
@@ -24,4 +25,4 @@
         <div class="row">Types:&nbsp;{{pokemonCard.types}}</div>
     </div>
 </div>
-
+<!--[src]="pokemonCard.sprite[]"-->

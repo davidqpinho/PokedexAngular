@@ -6,5 +6,9 @@ export class UserInputService {
 
   public returnButton;
   public enterButton;
+  public leftRigthButtons;
+  public upDownButtons;
+  public languageKeyboard;
+  public scrollButtom;
   constructor() { }
 }
